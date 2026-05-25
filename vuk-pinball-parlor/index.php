@@ -56,6 +56,74 @@ require_once 'includes/header.php';
     </div>
   </section>
 
+
+  <!-- ============================================================
+       Block 3: Locations
+       ============================================================ -->
+  <section class="section section-dark" id="locations">
+    <div class="container">
+      <span class="section-tag">02 &mdash; Find Us</span>
+      <div class="grid-2">
+
+        <!-- Left: address + directions -->
+        <div>
+          <h2 class="section-title">Find Us</h2>
+          <p class="section-desc">
+            Vuk Pinball Parlor is located inside Fullsteam Brewery at the
+            American Tobacco Company (ATC) in Durham, NC. We&rsquo;re on the ATC campus &mdash;
+            find Fullsteam and you&rsquo;ll find us.
+          </p>
+          <address class="location-address">
+            Fullsteam Brewery<br>
+            726 Rigsbee Ave<br>
+            Durham, NC 27701
+          </address>
+          <a href="<?= htmlspecialchars($SITE['fullsteam_url']) ?>"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-ghost mb-xl">Visit Fullsteam Brewery</a>
+
+          <div class="mb-xl">
+            <p style="font-family:var(--font-heading);font-size:11px;letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--copper-bright);margin-bottom:var(--space-sm);">Get Directions From</p>
+            <div class="directions-row">
+              <input id="directions-from" type="text" placeholder="Your starting address">
+              <button type="button" class="btn btn-primary" id="directions-btn">Go</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: map -->
+        <div class="map-wrap">
+          <?php if ($SITE['maps_embed_url']): ?>
+            <iframe
+              src="<?= htmlspecialchars($SITE['maps_embed_url']) ?>"
+              allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="<?= htmlspecialchars($SITE['venue']) ?>"></iframe>
+          <?php else: ?>
+            <div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--parchment);font-family:var(--font-mono);font-size:13px;">Map coming soon</div>
+          <?php endif; ?>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script>
+  (function () {
+    var btn   = document.getElementById('directions-btn');
+    var input = document.getElementById('directions-from');
+    function go() {
+      var origin = input.value.trim();
+      if (!origin) { input.focus(); return; }
+      window.open(
+        'https://www.google.com/maps/dir/?api=1&destination=Fullsteam+Brewery+Durham+NC&origin=' + encodeURIComponent(origin),
+        '_blank', 'noopener'
+      );
+    }
+    btn.addEventListener('click', go);
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') go(); });
+  }());
+  </script>
+
 </main>
 
 <?php require_once 'includes/footer.php'; ?>

@@ -428,6 +428,41 @@ body.nav-open { overflow: hidden; }
 @media (max-width: 720px) { .map-wrap { aspect-ratio: 4 / 3; } }
 
 /* ============================================================
+   LOCATIONS
+   ============================================================ */
+.location-address {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--copper-bright);
+  letter-spacing: var(--tracking-normal);
+  margin: var(--space-sm) 0 var(--space-lg);
+  line-height: 1.7;
+  font-style: normal;
+}
+.directions-row {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+.directions-row input {
+  flex: 1;
+  padding: 12px 16px;
+  background: rgba(223,192,144,0.08);
+  border: 1px solid var(--copper-mid);
+  border-radius: var(--radius-sm);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.directions-row input:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: rgba(223,192,144,0.14);
+}
+.directions-row input::placeholder { color: var(--parchment-dk); opacity: 0.6; }
+
+/* ============================================================
    FORMS
    ============================================================ */
 .form-field { margin-bottom: var(--space-md); }
