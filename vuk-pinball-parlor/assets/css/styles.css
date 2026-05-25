@@ -294,6 +294,15 @@ body.nav-open { overflow: hidden; }
 .hero-corner--br { bottom: 32px; right: 32px; border-bottom: 2px solid var(--gold); border-right: 2px solid var(--gold); }
 
 .hero-inner { position: relative; z-index: 4; max-width: 900px; }
+.hero-logo {
+  max-width: 360px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto var(--space-lg);
+  filter: drop-shadow(0 4px 24px rgba(200,165,52,0.3));
+}
+
 .hero-eyebrow {
   font-family: var(--font-heading);
   font-size: 11px;
