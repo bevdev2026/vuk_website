@@ -6,7 +6,10 @@ $_ig = (!empty($SITE['instagram_url']) && $SITE['instagram_url'] !== '#') ? $SIT
   <div class="container">
     <div class="footer-inner">
       <div class="footer-top">
-        <span class="footer-brand"><?= htmlspecialchars($SITE['brand_short']) ?></span>
+        <a href="index.php" class="footer-brand-link">
+          <img src="assets/images/vuk_logo.png" alt="<?= htmlspecialchars($SITE['brand']) ?>" class="footer-logo"
+               onerror="this.onerror=null;this.src='assets/images/placeholder-mechanism.svg'">
+        </a>
         <div class="footer-links">
           <a href="<?= htmlspecialchars($SITE['fullsteam_url']) ?>" target="_blank" rel="noopener noreferrer" class="footer-venue">A Fullsteam Brewery Residency</a>
           <?php if ($_fb): ?>

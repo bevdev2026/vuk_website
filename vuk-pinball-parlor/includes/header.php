@@ -17,7 +17,10 @@
 
 <header class="site-header" id="site-header">
   <div class="nav-container">
-    <a href="index.php" class="nav-brand"><?= htmlspecialchars($SITE['brand_short']) ?></a>
+    <a href="index.php" class="nav-brand" aria-label="<?= htmlspecialchars($SITE['brand']) ?>">
+      <img src="assets/images/vuk_logo.png" alt="<?= htmlspecialchars($SITE['brand']) ?>" class="nav-logo"
+           onerror="this.onerror=null;this.src='assets/images/placeholder-mechanism.svg'">
+    </a>
     <nav class="nav-links" aria-label="Main navigation">
       <?php foreach ($NAV as $item):
         $active = ($PAGE['slug'] === $item['slug']) ? ' active' : '';
@@ -35,6 +38,10 @@
   </div>
   <div class="nav-overlay" aria-hidden="true">
     <button class="nav-close" aria-label="Close menu">&#x2715;</button>
+    <a href="index.php" class="nav-overlay-brand">
+      <img src="assets/images/vuk_logo.png" alt="<?= htmlspecialchars($SITE['brand']) ?>" class="nav-overlay-logo"
+           onerror="this.onerror=null;this.src='assets/images/placeholder-mechanism.svg'">
+    </a>
     <nav class="nav-overlay-links" aria-label="Mobile navigation">
       <?php foreach ($NAV as $item):
         $active = ($PAGE['slug'] === $item['slug']) ? ' active' : '';

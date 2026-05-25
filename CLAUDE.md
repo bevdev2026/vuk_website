@@ -110,9 +110,9 @@ onerror="this.onerror=null;this.src='assets/images/placeholder-[type].svg'"
 ### Desktop Nav
 - Lives entirely in `includes/header.php`
 - Rendered by looping `$NAV` from `config.php` — never hardcoded
-- Logo/brand name ("Vuk") on the left, nav links on the right
+- Logo image (`vuk_logo.png`) on the left, nav links on the right
+- Logo links to `index.php`; `alt` attribute = `$SITE['brand']`; `onerror` fallback to `placeholder-mechanism.svg`
 - Active state: compare each item's `slug` to `$PAGE['slug']`; add `class="active"` when matched
-- Brand name links to `index.php`
 - Nav is sticky (fixed to top on scroll)
 - Example render loop:
 ```php
@@ -139,7 +139,10 @@ foreach ($NAV as $item) {
 ```html
 <header class="site-header">
   <div class="nav-container">
-    <a href="index.php" class="nav-brand"><?= htmlspecialchars($SITE['brand']) ?></a>
+    <a href="index.php" class="nav-brand" aria-label="<?= htmlspecialchars($SITE['brand']) ?>">
+      <img src="assets/images/vuk_logo.png" alt="<?= htmlspecialchars($SITE['brand']) ?>" class="nav-logo"
+           onerror="this.onerror=null;this.src='assets/images/placeholder-mechanism.svg'">
+    </a>
     <nav class="nav-links" aria-label="Main navigation">
       <!-- loop renders links here -->
     </nav>
@@ -149,6 +152,10 @@ foreach ($NAV as $item) {
   </div>
   <div class="nav-overlay" aria-hidden="true">
     <button class="nav-close" aria-label="Close menu">✕</button>
+    <a href="index.php" class="nav-overlay-brand">
+      <img src="assets/images/vuk_logo.png" alt="<?= htmlspecialchars($SITE['brand']) ?>" class="nav-overlay-logo"
+           onerror="this.onerror=null;this.src='assets/images/placeholder-mechanism.svg'">
+    </a>
     <nav class="nav-overlay-links">
       <!-- same loop -->
     </nav>
@@ -161,7 +168,10 @@ foreach ($NAV as $item) {
 |-------|---------|
 | `site-header` | Sticky top bar |
 | `nav-container` | Inner flex row (brand + links + toggle) |
-| `nav-brand` | Logo/brand text link |
+| `nav-brand` | Logo image link (wraps `<img class="nav-logo">`) |
+| `nav-logo` | Logo `<img>` — 36px tall in nav bar |
+| `nav-overlay-brand` | Logo link at top of mobile overlay |
+| `nav-overlay-logo` | Logo `<img>` — 48px tall in mobile overlay |
 | `nav-links` | Desktop horizontal link list |
 | `nav-link` | Individual link |
 | `nav-link.active` | Current page indicator |
@@ -200,7 +210,7 @@ Use existing CSS custom properties — do not introduce new color values or spac
 - Video background with poster fallback
 - Corner overlay decorations
 - Eyebrow: venue residency line
-- H1: "VUK"
+- Logo: `<img src="assets/images/vuk_logo.png">` displayed prominently above the tagline; `alt="<?= htmlspecialchars($SITE['brand']) ?>"`; `onerror` fallback to `placeholder-mechanism.svg`; max-width ~360px, centered
 - Tagline: `$SITE['tagline']`
 - Two CTA buttons: "League Nights" → `leagues.php`, "Find Us" → `#locations`
 
@@ -282,6 +292,7 @@ Use existing CSS custom properties — do not introduce new color values or spac
 - **Lives in:** `includes/footer.php`
 - **Layout:** Full-width dark bar, centered single or two-row layout
 - **Content:**
+  - Logo: `vuk_logo.png` at top, centered, max-height 48px, links to `index.php`
   - Copyright: `© <?= $SITE['year'] ?> Triangle Coin Op LLC. All rights reserved.`
   - This is the **only place** Triangle Coin Op LLC appears on the site
   - Fullsteam Brewery link: `$SITE['fullsteam_url']`, label "A Fullsteam Brewery Residency", new tab
@@ -342,3 +353,4 @@ Use existing CSS custom properties — do not introduce new color values or spac
 | `$SITE['instagram_url']` | TBD |
 | `$SITE['year']` | `date('Y')` |
 | Footer copyright only | Triangle Coin Op LLC |
+| Logo file | `assets/images/vuk_logo.png` — used in nav (36px), hero (max 360px), mobile overlay (48px), footer (48px) |
