@@ -102,18 +102,11 @@ h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--ivory); letter-s
    HEADER / NAV
    ============================================================ */
 .site-header {
-  position: fixed; top: 0; left: 0; right: 0;
+  position: absolute; top: 0; left: 0; right: 0;
   height: var(--header-height);
   z-index: 100;
   background: transparent;
   border-bottom: 1px solid transparent;
-  transition: background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
-}
-.site-header.scrolled {
-  background: rgba(22,8,4,0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom-color: rgba(200,165,52,0.15);
 }
 .nav-container {
   display: flex;

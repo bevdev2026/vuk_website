@@ -2,7 +2,6 @@
   var toggle  = document.querySelector('.nav-toggle');
   var close   = document.querySelector('.nav-close');
   var overlay = document.querySelector('.nav-overlay');
-  var header  = document.getElementById('site-header');
 
   function openMenu() {
     document.body.classList.add('nav-open');
@@ -38,8 +37,4 @@
     }
   });
 
-  // Scroll: add .scrolled class to header after 20px
-  window.addEventListener('scroll', function () {
-    header.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
 }());

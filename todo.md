@@ -52,18 +52,18 @@
 ---
 
 ## Config TODOs
-- [ ] `$SITE['brand']` — update to "Vuk Pinball Parlor"
-- [ ] `$SITE['brand_short']` — "Vuk"
-- [ ] `$SITE['fullsteam_url']` — confirm Fullsteam Brewery website URL
-- [ ] `$SITE['maps_embed_url']` — Google Maps Embed API iframe src for Fullsteam Brewery ATC
-- [ ] `$SITE['matchplay_url']` — Matchplay profile/tournament URL
-- [ ] `$SITE['insider_leaderboard_url']` — set to `null` now; add real URL in September 2025
-- [ ] `$SITE['facebook_url']` — Vuk Facebook page URL
-- [ ] `$SITE['instagram_url']` — Vuk Instagram profile URL
-- [ ] `$SITE['support_email']` — support@trianglecoinop.com (confirm live)
-- [ ] `$SITE['public_email']` — hello@trianglecoinop.com (confirm live)
-- [ ] Add `Contact` to `$NAV` → `contact.php`
-- [ ] Remove or repurpose `venue-operations.php` entry from `$NAV` (not part of Vuk site)
+- [x] `$SITE['brand']` — "Vuk Pinball Parlor"
+- [x] `$SITE['brand_short']` — "Vuk"
+- [x] `$SITE['fullsteam_url']` — https://www.fullsteambrewery.com
+- [x] `$SITE['maps_embed_url']` — Google Maps embed in place
+- [x] `$SITE['insider_leaderboard_url']` — null (intentional until September 2025)
+- [x] `$SITE['support_email']` — support@vukpinball.biz
+- [x] Contact in `$NAV` → `contact.php`
+- [x] Leagues removed from `$NAV`
+- [ ] `$SITE['matchplay_url']` — need real Matchplay URL
+- [ ] `$SITE['facebook_url']` — need Vuk Facebook page URL
+- [ ] `$SITE['instagram_url']` — need Vuk Instagram URL
+- [x] `$SITE['public_email']` — support@vukpinball.biz
 
 ---
 
