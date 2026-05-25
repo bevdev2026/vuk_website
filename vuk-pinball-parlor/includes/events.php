@@ -2,7 +2,7 @@
 $EVENTS = [
   [
     'title'       => 'League Night',
-    'date'        => '2025-08-07',
+    'date'        => '2026-06-04',
     'time'        => '7:00 PM',
     'description' => 'IFPA-sanctioned league night at Vuk. All skill levels welcome — come play, meet the community, and earn ranking points.',
     'url'         => null,
@@ -10,7 +10,7 @@ $EVENTS = [
   ],
   [
     'title'       => 'League Night',
-    'date'        => '2025-08-14',
+    'date'        => '2026-06-11',
     'time'        => '7:00 PM',
     'description' => 'IFPA-sanctioned league night at Vuk. All skill levels welcome — come play, meet the community, and earn ranking points.',
     'url'         => null,
@@ -18,7 +18,7 @@ $EVENTS = [
   ],
   [
     'title'       => 'Open Play Weekend',
-    'date'        => '2025-08-16',
+    'date'        => '2026-06-20',
     'time'        => '12:00 PM',
     'description' => 'Drop in and play at your own pace. No registration required. All machines open.',
     'url'         => null,

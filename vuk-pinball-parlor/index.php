@@ -124,6 +124,81 @@ require_once 'includes/header.php';
   }());
   </script>
 
+
+  <!-- ============================================================
+       Block 4: Upcoming Events
+       ============================================================ -->
+  <?php
+  require_once 'includes/events.php';
+
+  $monthParam = (isset($_GET['month']) && preg_match('/^\d{4}-\d{2}$/', $_GET['month']))
+    ? $_GET['month'] : date('Y-m');
+  [$calYear, $calMonth] = array_map('intval', explode('-', $monthParam));
+  if ($calMonth < 1 || $calMonth > 12) { $calYear = (int)date('Y'); $calMonth = (int)date('m'); }
+
+  $firstTs   = mktime(0, 0, 0, $calMonth, 1, $calYear);
+  $daysInMon = (int)date('t', $firstTs);
+  $startDow  = (int)date('w', $firstTs);
+  $today     = date('Y-m-d');
+  $prevMon   = date('Y-m', mktime(0, 0, 0, $calMonth - 1, 1, $calYear));
+  $nextMon   = date('Y-m', mktime(0, 0, 0, $calMonth + 1, 1, $calYear));
+
+  $eventsByDate = [];
+  foreach ($EVENTS as $i => $ev) {
+    $eventsByDate[$ev['date']][] = $i;
+  }
+  ?>
+  <section class="section" id="events">
+    <div class="container">
+      <span class="section-tag">03 &mdash; Events</span>
+      <h2 class="section-title">Upcoming Events</h2>
+
+      <div class="calendar-header">
+        <a href="?month=<?= $prevMon ?>#events" class="calendar-nav" aria-label="Previous month">&#8592;</a>
+        <span class="calendar-month"><?= date('F Y', $firstTs) ?></span>
+        <a href="?month=<?= $nextMon ?>#events" class="calendar-nav" aria-label="Next month">&#8594;</a>
+      </div>
+
+      <div class="calendar-grid">
+        <?php foreach (['Sun','Mon','Tue','Wed','Thu','Fri','Sat'] as $dow): ?>
+          <div class="calendar-dow"><?= $dow ?></div>
+        <?php endforeach; ?>
+
+        <?php for ($e = 0; $e < $startDow; $e++): ?>
+          <div class="calendar-cell calendar-cell--empty"></div>
+        <?php endfor; ?>
+
+        <?php for ($d = 1; $d <= $daysInMon; $d++):
+          $ds      = sprintf('%04d-%02d-%02d', $calYear, $calMonth, $d);
+          $isToday = ($ds === $today);
+          $evIdxs  = $eventsByDate[$ds] ?? [];
+        ?>
+          <div class="calendar-cell<?= $isToday ? ' calendar-cell--today' : '' ?><?= $evIdxs ? ' calendar-cell--has-events' : '' ?>">
+            <span class="calendar-day"><?= $d ?></span>
+            <?php foreach ($evIdxs as $i): ?>
+              <a href="#event-<?= $i ?>" class="calendar-event"><?= htmlspecialchars($EVENTS[$i]['title']) ?></a>
+            <?php endforeach; ?>
+          </div>
+        <?php endfor; ?>
+      </div>
+
+      <?php foreach ($EVENTS as $i => $ev): ?>
+        <div id="event-<?= $i ?>" class="event-card">
+          <div class="event-card-inner">
+            <h3 class="event-card-title"><?= htmlspecialchars($ev['title']) ?></h3>
+            <span class="event-card-meta"><?= date('l, F j, Y', strtotime($ev['date'])) ?> &mdash; <?= htmlspecialchars($ev['time']) ?></span>
+            <p class="event-card-desc"><?= htmlspecialchars($ev['description']) ?></p>
+            <?php if ($ev['url']): ?>
+              <a href="<?= htmlspecialchars($ev['url']) ?>" target="_blank" rel="noopener" class="btn btn-ghost"><?= htmlspecialchars($ev['url_label']) ?></a>
+            <?php endif; ?>
+            <a href="#events" class="event-card-close" aria-label="Close event">&#x2715;</a>
+          </div>
+        </div>
+      <?php endforeach; ?>
+
+    </div>
+  </section>
+
 </main>
 
 <?php require_once 'includes/footer.php'; ?>
