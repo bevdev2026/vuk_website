@@ -47,7 +47,7 @@
 ---
 
 ## 404.php
-- [ ] `404.php` — branded error page; pinball headline; two CTAs; `http_response_code(404)`
+- [x] `404.php` — branded error page; pinball headline; two CTAs; `http_response_code(404)`
 
 ---
 
