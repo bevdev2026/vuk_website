@@ -22,7 +22,7 @@
 ## index.php Sections
 - [x] Block 1: Hero — video bg, corner overlays, eyebrow/title/tagline/CTAs
 - [x] Block 2: About — short brand-voice paragraph; Vuk community; enthusiast owners; beautiful machines; all skill levels welcome; CTA to explore
-- [ ] Block 3: Locations — address copy (Fullsteam Brewery, ATC, Durham NC); Fullsteam link; Google Maps embed; directions input
+- [x] Block 3: Locations — address copy (Fullsteam Brewery, ATC, Durham NC); Fullsteam link; Google Maps embed; directions input
 - [ ] Block 4: Upcoming Events — monthly PHP calendar; prev/next month nav; event detail cards; data from `includes/events.php`
 - [ ] Block 5: Leaderboard — Coming Soon placeholder (Stern Insider Connected, September 2025)
 - [ ] Block 6: Local Hero — centered callout; invite players to email photo + high score via contact form
