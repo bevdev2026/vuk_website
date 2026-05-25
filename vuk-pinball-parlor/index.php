@@ -37,6 +37,25 @@ require_once 'includes/header.php';
     </div>
   </section>
 
+
+  <!-- ============================================================
+       Block 2: About
+       ============================================================ -->
+  <section class="section text-center" id="about">
+    <div class="container">
+      <span class="section-tag">01 &mdash; About</span>
+      <div class="section-intro" style="margin:0 auto;">
+        <p class="section-desc" style="margin:0 auto;">
+          Vuk is a pinball parlor inside Fullsteam Brewery at the American Tobacco Company in Durham &mdash;
+          built by people who love both the game and the machines. Every table on our floor is maintained
+          to play exactly the way it was designed to. We care about the craft, and it shows.
+          Whether you've never touched a flipper or you're chasing your IFPA ranking, you belong here.
+          Explore the site to find out what's on.
+        </p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <?php require_once 'includes/footer.php'; ?>
