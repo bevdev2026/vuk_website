@@ -31,7 +31,7 @@ require_once 'includes/header.php';
         onerror="this.onerror=null;this.src='assets/images/placeholder-mechanism.svg'">
       <p class="hero-tagline"><?= htmlspecialchars($SITE['tagline']) ?></p>
       <div class="hero-buttons">
-        <a href="leagues.php" class="btn btn-primary btn-pill">League Nights</a>
+        <a href="#events" class="btn btn-primary btn-pill">League Nights</a>
         <a href="#locations" class="btn btn-ghost btn-pill">Find Us</a>
       </div>
     </div>
@@ -253,8 +253,63 @@ require_once 'includes/header.php';
           we want to know. Send us a photo of yourself at the machine and a clear shot of
           the high score screen. Attachments are welcome on the contact form.
         </p>
-        <a href="contact.php" class="btn btn-primary btn-pill">Submit Your Score</a>
       </div>
+
+      <div class="local-hero-grid">
+
+        <!-- Foo Fighters -->
+        <div class="hero-card">
+          <img src="assets/images/placeholder-mechanism.svg" alt="Foo Fighters high score photo"
+               class="hero-card-img"
+               onerror="this.onerror=null;this.src='assets/images/placeholder-mechanism.svg'">
+          <div class="hero-card-machine">Foo Fighters</div>
+          <div class="hero-card-score">1,847,392,510</div>
+          <div class="hero-card-player">&#8212; Unclaimed &#8212;</div>
+        </div>
+
+        <!-- Aerosmith -->
+        <div class="hero-card">
+          <img src="assets/images/placeholder-mechanism.svg" alt="Aerosmith high score photo"
+               class="hero-card-img"
+               onerror="this.onerror=null;this.src='assets/images/placeholder-mechanism.svg'">
+          <div class="hero-card-machine">Aerosmith</div>
+          <div class="hero-card-score">312,654,780</div>
+          <div class="hero-card-player">&#8212; Unclaimed &#8212;</div>
+        </div>
+
+        <!-- Funhouse -->
+        <div class="hero-card">
+          <img src="assets/images/placeholder-mechanism.svg" alt="Funhouse high score photo"
+               class="hero-card-img"
+               onerror="this.onerror=null;this.src='assets/images/placeholder-mechanism.svg'">
+          <div class="hero-card-machine">Funhouse</div>
+          <div class="hero-card-score">4,203,887,000</div>
+          <div class="hero-card-player">&#8212; Unclaimed &#8212;</div>
+        </div>
+
+        <!-- Guardians of the Galaxy -->
+        <div class="hero-card">
+          <img src="assets/images/placeholder-mechanism.svg" alt="Guardians of the Galaxy high score photo"
+               class="hero-card-img"
+               onerror="this.onerror=null;this.src='assets/images/placeholder-mechanism.svg'">
+          <div class="hero-card-machine">Guardians</div>
+          <div class="hero-card-score">478,221,960</div>
+          <div class="hero-card-player">&#8212; Unclaimed &#8212;</div>
+        </div>
+
+        <!-- Pokemon -->
+        <div class="hero-card">
+          <img src="assets/images/placeholder-mechanism.svg" alt="Pokemon high score photo"
+               class="hero-card-img"
+               onerror="this.onerror=null;this.src='assets/images/placeholder-mechanism.svg'">
+          <div class="hero-card-machine">Pok&eacute;mon</div>
+          <div class="hero-card-score">2,918,540,000</div>
+          <div class="hero-card-player">&#8212; Unclaimed &#8212;</div>
+        </div>
+
+      </div>
+
+      <a href="contact.php" class="btn btn-primary btn-pill">Submit Your Score</a>
     </div>
   </section>
 

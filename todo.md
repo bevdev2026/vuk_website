@@ -26,31 +26,23 @@
 - [x] Block 4: Upcoming Events — monthly PHP calendar; prev/next month nav; event detail cards; data from `includes/events.php`
 - [x] Block 5: Leaderboard — Coming Soon placeholder (Stern Insider Connected, September 2025)
 - [x] Block 6: Local Hero — centered callout; invite players to email photo + high score via contact form
-- [ ] Block 7: Footer — copyright Triangle Coin Op LLC; Fullsteam link; Facebook + Instagram icons
-
----
-
-## leagues.php
-- [ ] Page shell
-- [ ] Section: League schedule / next event
-- [ ] Section: Machine roster
-- [ ] Section: How to join / sign-up CTA
+- [x] Block 7: Footer — copyright Triangle Coin Op LLC; Fullsteam link; Facebook + Instagram icons
 
 ---
 
 ## mercantile.php
-- [ ] Page shell
-- [ ] Section: Apparel & Uniforms
-- [ ] Section: Amazon Collection
-- [ ] Section: League Exclusives
+- [x] Page shell
+- [x] Section: Apparel
+- [x] Section: Swag
+- [x] Section: Stickers
 
 ---
 
 ## contact.php
-- [ ] Page shell
-- [ ] Prominent mailto link (`$SITE['support_email']`)
-- [ ] Contact form (name, email, message, optional attachment, honeypot)
-- [ ] `submit-contact.php` — PHP mail() handler with attachment support
+- [x] Page shell
+- [x] Prominent mailto link (`$SITE['support_email']`)
+- [x] Contact form (name, email, message, optional attachment, honeypot)
+- [x] `submit-contact.php` — PHP mail() handler with attachment support
 
 ---
 

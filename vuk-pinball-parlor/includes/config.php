@@ -6,7 +6,7 @@ $SITE = [
   'location'                => 'Durham, North Carolina',
   'venue'                   => 'Fullsteam Brewery, ATC, Durham, NC',
   'fullsteam_url'           => 'https://www.fullsteambrewery.com',
-  'support_email'           => 'support@trianglecoinop.com',
+  'support_email'           => 'support@vukpinball.biz',
   'public_email'            => 'hello@trianglecoinop.com',
   'matchplay_url'           => null,
   'maps_embed_url'          => 'https://www.google.com/maps/embed/v1/place?key=AIzaSyApzuAcUYNMdHe1O3_yg-d5HVqEVUmcDKg&q=American+Tobacco+Company+Blackwell+St+Durham+NC+27701',
@@ -19,7 +19,6 @@ $SITE = [
 
 $NAV = [
   ['label' => 'Home',       'href' => 'index.php',     'slug' => 'home'],
-  ['label' => 'Leagues',    'href' => 'leagues.php',   'slug' => 'leagues'],
   ['label' => 'Mercantile', 'href' => 'mercantile.php','slug' => 'mercantile'],
   ['label' => 'Contact',    'href' => 'contact.php',   'slug' => 'contact'],
 ];
