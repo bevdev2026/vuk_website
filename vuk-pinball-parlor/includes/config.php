@@ -9,7 +9,7 @@ $SITE = [
   'support_email'           => 'support@trianglecoinop.com',
   'public_email'            => 'hello@trianglecoinop.com',
   'matchplay_url'           => null,
-  'maps_embed_url'          => 'https://www.google.com/maps/embed/v1/place?key=AIzaSyApzuAcUYNMdHe1O3_yg-d5HVqEVUmcDKg&q=Fullsteam+Brewery+Durham+NC',
+  'maps_embed_url'          => 'https://www.google.com/maps/embed/v1/place?key=AIzaSyApzuAcUYNMdHe1O3_yg-d5HVqEVUmcDKg&q=American+Tobacco+Company+Blackwell+St+Durham+NC+27701',
   'insider_leaderboard_url' => null,
   'facebook_url'            => null,
   'instagram_url'           => null,

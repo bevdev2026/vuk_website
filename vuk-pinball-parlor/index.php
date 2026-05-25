@@ -75,8 +75,8 @@ require_once 'includes/header.php';
           </p>
           <address class="location-address">
             Fullsteam Brewery<br>
-            726 Rigsbee Ave<br>
-            Durham, NC 27701
+            American Tobacco Company<br>
+            Blackwell St, Durham, NC 27701
           </address>
           <a href="<?= htmlspecialchars($SITE['fullsteam_url']) ?>"
              target="_blank" rel="noopener noreferrer"
@@ -115,7 +115,7 @@ require_once 'includes/header.php';
       var origin = input.value.trim();
       if (!origin) { input.focus(); return; }
       window.open(
-        'https://www.google.com/maps/dir/?api=1&destination=Fullsteam+Brewery+Durham+NC&origin=' + encodeURIComponent(origin),
+        'https://www.google.com/maps/dir/?api=1&destination=American+Tobacco+Company+Blackwell+St+Durham+NC+27701&origin=' + encodeURIComponent(origin),
         '_blank', 'noopener'
       );
     }
