@@ -8,14 +8,14 @@
 ---
 
 ## Setup & Infrastructure
-- [ ] `includes/config.php` — rewrite for Vuk brand; remove Triangle Coin Op from all keys except `parent_co` (footer only)
-- [ ] `includes/events.php` — event data array, seeded with 2–3 placeholder events
-- [ ] `includes/header.php` — sticky nav, desktop links, hamburger button, mobile overlay
-- [ ] `assets/js/nav.js` — vanilla JS mobile nav toggle
-- [ ] `includes/footer.php` — copyright (Triangle Coin Op LLC), Fullsteam link, social icons
-- [ ] Base CSS file — custom properties, layout classes, component classes
-- [ ] Placeholder SVGs — `placeholder-mechanism.svg`, `placeholder-divider.svg`
-- [ ] `.htaccess` — `ErrorDocument 404 /404.php`
+- [x] `includes/config.php` — rewrite for Vuk brand; remove Triangle Coin Op from all keys except `parent_co` (footer only)
+- [x] `includes/events.php` — event data array, seeded with 2–3 placeholder events
+- [x] `includes/header.php` — sticky nav, desktop links, hamburger button, mobile overlay
+- [x] `assets/js/nav.js` — vanilla JS mobile nav toggle
+- [x] `includes/footer.php` — copyright (Triangle Coin Op LLC), Fullsteam link, social icons
+- [x] Base CSS file — custom properties, layout classes, component classes
+- [x] Placeholder SVGs — `placeholder-mechanism.svg`, `placeholder-divider.svg`
+- [x] `.htaccess` — `ErrorDocument 404 /404.php`
 
 ---
 
