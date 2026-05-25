@@ -238,6 +238,26 @@ require_once 'includes/header.php';
     </div>
   </section>
 
+
+  <!-- ============================================================
+       Block 6: Local Hero
+       ============================================================ -->
+  <section class="section text-center" id="local-hero">
+    <div class="container">
+      <span class="section-tag">05 &mdash; Local Heroes</span>
+      <h2 class="section-title">Local Heroes</h2>
+      <div class="section-intro" style="margin:0 auto;">
+        <p class="section-desc" style="margin:0 auto var(--space-lg);">
+          Every machine has a champion. The Local Hero board celebrates the highest score
+          on each table &mdash; earned fair, verified by photo. If you&rsquo;ve got the top score,
+          we want to know. Send us a photo of yourself at the machine and a clear shot of
+          the high score screen. Attachments are welcome on the contact form.
+        </p>
+        <a href="contact.php" class="btn btn-primary btn-pill">Submit Your Score</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <?php require_once 'includes/footer.php'; ?>
