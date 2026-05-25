@@ -199,6 +199,45 @@ require_once 'includes/header.php';
     </div>
   </section>
 
+
+  <!-- ============================================================
+       Block 5: Leaderboard
+       ============================================================ -->
+  <section class="section section-dark text-center" id="leaderboard">
+    <div class="container">
+      <span class="section-tag">04 &mdash; Leaderboard</span>
+      <h2 class="section-title">Leaderboard</h2>
+
+      <?php if ($SITE['insider_leaderboard_url']): ?>
+
+        <iframe
+          src="<?= htmlspecialchars($SITE['insider_leaderboard_url']) ?>"
+          width="100%" height="600"
+          style="border:0;display:block;border-radius:var(--radius-md);"
+          loading="lazy"
+          title="Vuk Pinball Leaderboard — Stern Insider Connected">
+          <a href="<?= htmlspecialchars($SITE['insider_leaderboard_url']) ?>" target="_blank" rel="noopener">
+            View leaderboard on Stern Insider Connected
+          </a>
+        </iframe>
+
+      <?php else: ?>
+
+        <div class="leaderboard-placeholder">
+          <div class="leaderboard-icon" aria-hidden="true">&#9651;</div>
+          <p class="section-desc" style="margin:0 auto var(--space-md);">
+            Live leaderboards powered by Stern Insider Connected &mdash; coming soon.
+          </p>
+          <p class="leaderboard-sub">
+            Track your scores, climb the rankings, and see who&rsquo;s leading on every machine.
+          </p>
+        </div>
+
+      <?php endif; ?>
+
+    </div>
+  </section>
+
 </main>
 
 <?php require_once 'includes/footer.php'; ?>
